@@ -4,7 +4,7 @@ trigger:
 
 variables:
   azureServiceConnection: "sc-azure-spn" # <-- your service connection name
-  webAppName: "my-unique-webapp-name" # <-- your App Service name
+  webAppName: "mywebapp22" # <-- your App Service name
   publishFolder: "$(Build.ArtifactStagingDirectory)/publish"
   packagePath: "$(Build.ArtifactStagingDirectory)/webapp.zip"
   vmImage: "ubuntu-latest"
