@@ -21,14 +21,6 @@ stages:
             inputs:
               packageType: "sdk"
               version: "8.0.x"
-
-          - script: |
-              dotnet restore
-              dotnet build --configuration Release --no-restore
-              dotnet test --configuration Release --no-build --verbosity normal
-              dotnet publish **/*.csproj -c Release -o $(publishFolder)
-            displayName: Restore, Build, Test, Publish
-
           - task: ArchiveFiles@2
             inputs:
               rootFolderOrFile: "$(publishFolder)"
